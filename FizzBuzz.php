@@ -14,13 +14,18 @@ function simpleFizzBuzz($number = 100)
     }
 }
 
-function secondFizzBuzz(){
-    for ($i = 1; $i <= 100; $i++) {
+function secondFizzBuzz($number = 100){
+    for ($i = 1; $i <= $number; $i++) {
         $mod3 = $i % 3;
         $mod5 = $i % 5;
         echo (!$mod3 && !$mod5 ? "FizzBuzz" : (!$mod3 ? "Fizz" : (!$mod5 ? "Buzz" : $i))) ."<br>";
     }
 }
 
+function shortFizzBuzz($number = 100) {
+    for($i=1;$i<=$number;$i++){echo !($i%3)?'Fizz'.(!($i%5)?'Buzz<br>':'<br>'):(!($i%5)?'Buzz<br>':$i.' <br>');}
+}
+
 //simpleFizzBuzz(30);
 //secondFizzBuzz();
+//shortFizzBuzz(500);
